@@ -6,7 +6,7 @@ export default function App() {
     <div>
       <h1>Howdy!!</h1>
       <h2>Is this a normal day?</h2>
-      <h2>I think so 😑</h2>
+      <h2>Its an AWSome day!!</h2>
     </div>
   );
 }
