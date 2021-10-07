@@ -9,6 +9,7 @@ export default function App() {
       <h2>Hey deploy this change please fo this demo!!</h2>
       <h2>Full pipeline deploy</h2>
       <h2>Full pipeline deploy 1.1</h2>
+      <h2>Full pipeline deploy 1.2</h2>
     </div>
   );
 }
