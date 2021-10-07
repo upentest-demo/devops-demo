@@ -3,10 +3,7 @@ os: windows
 files:
   - source: \
     destination: C:\Product
-  - source: \before_install.bat
-    destination: C:\script\before_install.bat
-  
 hooks:
   BeforeInstall:
-    - location: C:\script\before_install.bat
+    - location: C:\Product\before_install.bat
       timeout: 300
