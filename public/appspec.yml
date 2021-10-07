@@ -5,5 +5,5 @@ files:
     destination: C:\Product
 hooks:
   BeforeInstall:
-    - location: \before_install.bat
+    - location: \before-install.bat
       timeout: 300
