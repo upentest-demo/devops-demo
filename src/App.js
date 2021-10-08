@@ -7,6 +7,7 @@ export default function App() {
       <h1>Howdy!!</h1>
       <h2>Is this a normal day today? May be a quick demo??</h2>
       <h2>Now deploying via CodePipeline ...... DEPLOYED SUCCESSFULLY </h2>
+      <h2>Manual Approval Done NOW</h2>
     </div>
   );
 }
