@@ -6,8 +6,7 @@ export default function App() {
     <div>
       <h1>Howdy!!</h1>
       <h2>Is this a normal day today? May be a quick demo??</h2>
-      <h2>Now deploying via CodePipeline ...... DEPLOYED SUCCESSFULLY </h2>
-      <h2>New Deploy 2</h2>
+      <h2>This is AWS Demo</h2>
     </div>
   );
 }
