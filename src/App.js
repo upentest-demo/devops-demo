@@ -5,7 +5,7 @@ export default function App() {
   return (
     <div>
       <h1>Howdy!!</h1>
-      <h2>This is quick Demo</h2>
+      <h2>Lets trigger a build on 28-March-2023</h2>
     </div>
   );
 }
