@@ -57,3 +57,19 @@ Actions:
       SourcePath: .
     DependsOn:
       - Build_a4
+  AWSLambdainvoke_48:
+    Identifier: aws/lambda-invoke@v1.0.8
+    Environment:
+      Connections:
+        - Role: CodeCatalystWorkflowDevelopmentRole-UVOrg1
+          Name: "927397836277"
+      Name: Dev
+    Compute:
+      Type: EC2
+    Configuration:
+      ContinueOnError: false
+      AWSRegion: us-east-1
+      LogType: Tail
+      Function: invalidateCLoudfrontCacheX
+    DependsOn:
+      - AmazonS3publish_90
