@@ -1,0 +1,39 @@
+Name: Workflow_f1f3
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - master
+
+# Required - Define action configurations.
+Actions:
+  Build_a4:
+    Identifier: aws/build@v1.0.0
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Outputs:
+      AutoDiscoverReports:
+        Enabled: true
+        ReportNamePrefix: rpt
+      Artifacts:
+        - Name: newOutput
+          Files:
+            - "*.js"
+            - "*.html"
+    Configuration:
+      Steps:
+        - Run: echo "Hello, let's start build!"
+        - Run: npm install
+        - Run: npm run build
+        - Run: echo "Build finished"
+    Compute:
+      Type: EC2
+      Fleet: Linux.x86-64.Large
+    Environment:
+      Connections:
+        - Role: CodeCatalystWorkflowDevelopmentRole-UVOrg1
+          Name: "927397836277"
+      Name: Dev
