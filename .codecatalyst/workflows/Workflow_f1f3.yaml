@@ -21,7 +21,7 @@ Actions:
       Artifacts:
         - Name: newOutput
           Files:
-            - build/*
+            - "**/*"
     Configuration:
       Steps:
         - Run: echo "Hello, let's start build!"
