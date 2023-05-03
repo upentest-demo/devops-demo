@@ -1,0 +1,37 @@
+Name: Workflow_a784
+SchemaVersion: "1.0"
+
+# Optional - Set automatic triggers.
+Triggers:
+  - Type: Push
+    Branches:
+      - master
+
+# Required - Define action configurations.
+Actions:
+  Build_ad:
+    Identifier: aws/build@v1.0.0
+    Inputs:
+      Sources:
+        - WorkflowSource
+    Outputs:
+      AutoDiscoverReports:
+        Enabled: false
+      Artifacts:
+        - Name: newOutput
+          Files:
+            - build/*
+    Configuration:
+      Steps:
+        - Run: echo "Let me build this!!"
+        - Run: npm install
+        - Run: npm run build
+        - Run: echo "Completed"
+    Compute:
+      Type: EC2
+      Fleet: Linux.x86-64.Large
+    Environment:
+      Connections:
+        - Role: CodeCatalystWorkflowDevelopmentRole-UVOrg1
+          Name: "927397836277"
+      Name: Dev
