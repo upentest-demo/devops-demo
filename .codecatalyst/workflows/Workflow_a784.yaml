@@ -20,7 +20,7 @@ Actions:
       Artifacts:
         - Name: newOutput
           Files:
-            - build/*
+            - "*"
     Configuration:
       Steps:
         - Run: echo "Let me build this!!"
