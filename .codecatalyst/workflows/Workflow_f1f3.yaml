@@ -40,3 +40,20 @@ Actions:
         - Role: CodeCatalystWorkflowDevelopmentRole-UVOrg1
           Name: "927397836277"
       Name: Dev
+  AmazonS3publish_90:
+    Identifier: aws/s3-publish@v1.0.5
+    Environment:
+      Connections:
+        - Role: CodeCatalystWorkflowDevelopmentRole-UVOrg1
+          Name: "927397836277"
+      Name: Dev
+    Inputs:
+      Artifacts:
+        - newOutput
+    Compute:
+      Type: EC2
+    Configuration:
+      DestinationBucketName: codecatalystsdemo
+      SourcePath: .
+    DependsOn:
+      - Build_a4
