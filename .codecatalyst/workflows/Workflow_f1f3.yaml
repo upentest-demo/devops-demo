@@ -25,6 +25,8 @@ Actions:
     Configuration:
       Steps:
         - Run: echo "Hello, let's start build!"
+        - Run: pwd
+        - Run: ls
         - Run: npm install
         - Run: npm run build
         - Run: echo "Build finished"
